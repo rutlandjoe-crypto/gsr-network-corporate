@@ -2,6 +2,7 @@ export default function Home() {
   const sites = [
     {
       name: "Global Sports Report",
+      network: "Global Sports Network",
       url: "https://globalsportsreport.com",
       label: "Sports",
       description:
@@ -10,6 +11,7 @@ export default function Home() {
     },
     {
       name: "Global AI Report",
+      network: "Global AI Network",
       url: "https://globalaireport.news",
       label: "AI",
       description:
@@ -18,6 +20,7 @@ export default function Home() {
     },
     {
       name: "Global Politics Report",
+      network: "Global Politics Network",
       url: "https://globalpoliticsreport.com",
       label: "Politics",
       description:
@@ -26,19 +29,28 @@ export default function Home() {
     },
     {
       name: "Global Entertainment Report",
+      network: "Global Entertainment Network",
       url: "https://globalentertainmentreport.com",
       label: "Entertainment",
       description:
         "Entertainment industry updates presented in a clean newsroom format.",
       color: "text-purple-400",
     },
+    {
+      name: "Global Betting Report",
+      network: "Global Betting Network",
+      url: "https://globalbettingreport.com",
+      label: "Betting",
+      description:
+        "Betting odds, fantasy signals, market movement, and sports wagering context.",
+      color: "text-lime-400",
+    },
   ];
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-10">
-
-        {/* 🔥 BANNER */}
+        {/* BANNER */}
         <div className="mb-12 overflow-hidden rounded-3xl border border-neutral-800 shadow-2xl">
           <img
             src="/gsr-banner.png"
@@ -58,14 +70,37 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-neutral-300">
-            GSR Network organizes live signals across sports, AI, politics, and
-            entertainment into clean, journalist-friendly sites built for speed,
-            clarity, and editorial judgment.
+            GSR Network organizes live signals across sports, AI, politics,
+            entertainment, and betting into clean, journalist-friendly sites
+            built for speed, clarity, data awareness, and editorial judgment.
           </p>
         </div>
 
+        {/* NETWORK GRAPHIC */}
+        <div className="mb-14 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl">
+          <p className="mb-6 text-sm font-bold uppercase tracking-[0.3em] text-neutral-400">
+            The Network
+          </p>
+
+          <div className="grid gap-4 md:grid-cols-5">
+            {sites.map((site) => (
+              <div
+                key={site.network}
+                className="rounded-2xl border border-neutral-800 bg-neutral-950 p-5 text-center"
+              >
+                <p
+                  className={`text-xs font-black uppercase tracking-[0.25em] ${site.color}`}
+                >
+                  {site.label}
+                </p>
+                <h2 className="mt-3 text-lg font-black">{site.network}</h2>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CARDS */}
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {sites.map((site) => (
             <a
               key={site.name}
@@ -74,7 +109,9 @@ export default function Home() {
               rel="noreferrer"
               className="group cursor-pointer rounded-3xl border border-neutral-800 bg-neutral-900/80 p-6 shadow-2xl transition hover:-translate-y-2 hover:border-red-500 hover:shadow-red-500/20"
             >
-              <p className={`mb-3 text-xs font-bold uppercase tracking-[0.25em] ${site.color}`}>
+              <p
+                className={`mb-3 text-xs font-bold uppercase tracking-[0.25em] ${site.color}`}
+              >
                 {site.label}
               </p>
 
@@ -97,9 +134,11 @@ export default function Home() {
 
           <p className="mt-5 text-base leading-8 text-neutral-300">
             It pulls in live data and news signals, filters for relevance, and
-            presents structured story cards that help journalists quickly see
-            what matters. The goal is to automate signal and organization, not
-            storytelling. Final journalism stays human.
+            presents structured story cards that help journalists, analysts,
+            media professionals, fantasy players, and betting-focused readers
+            quickly see what matters. The goal is to automate signal,
+            structure, and organization — not storytelling. Final journalism
+            stays human.
           </p>
         </div>
 

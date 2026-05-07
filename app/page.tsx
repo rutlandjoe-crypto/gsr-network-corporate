@@ -55,7 +55,7 @@ export default function Home() {
           <img
             src="/gsr-banner.png"
             alt="GSR Network Banner"
-            className="w-full h-auto"
+            className="h-auto w-full"
           />
         </div>
 
@@ -66,13 +66,18 @@ export default function Home() {
           </p>
 
           <h1 className="text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl">
-            Real-time content engines for modern journalism.
+            Live newsroom intelligence across sports, AI, politics,
+            entertainment, and betting.
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-neutral-300">
-            GSR Network organizes live signals across sports, AI, politics,
-            entertainment, and betting into clean, journalist-friendly sites
-            built for speed, clarity, data awareness, and editorial judgment.
+            GSR Network organizes live signals across five journalist-focused
+            platforms, turning real-time news, data, scores, odds, and industry
+            movement into clean, structured, editorially useful information.
+          </p>
+
+          <p className="mt-5 inline-flex rounded-full border border-red-500/40 bg-red-500/10 px-5 py-2 text-sm font-bold uppercase tracking-[0.22em] text-red-300">
+            Updated hourly across the network
           </p>
         </div>
 
@@ -93,6 +98,7 @@ export default function Home() {
                 >
                   {site.label}
                 </p>
+
                 <h2 className="mt-3 text-lg font-black">{site.network}</h2>
               </div>
             ))}
@@ -133,12 +139,33 @@ export default function Home() {
           <h2 className="text-3xl font-black">What GSR Network does</h2>
 
           <p className="mt-5 text-base leading-8 text-neutral-300">
-            It pulls in live data and news signals, filters for relevance, and
-            presents structured story cards that help journalists, analysts,
-            media professionals, fantasy players, and betting-focused readers
-            quickly see what matters. The goal is to automate signal,
-            structure, and organization — not storytelling. Final journalism
-            stays human.
+            GSR Network pulls in live data and news signals, filters for
+            relevance, and presents structured story cards that help
+            journalists, analysts, media professionals, fantasy players, and
+            betting-focused readers quickly see what matters.
+          </p>
+
+          <p className="mt-5 text-base leading-8 text-neutral-300">
+            The goal is to automate signal, structure, and organization — not
+            storytelling. GSR Network is built to support editorial judgment,
+            not replace it. Final journalism stays human.
+          </p>
+        </div>
+
+        {/* EDITORIAL STANDARD */}
+        <div className="mt-8 rounded-3xl border border-red-500/30 bg-red-500/10 p-8 shadow-2xl">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-300">
+            Editorial Standard
+          </p>
+
+          <h2 className="mt-4 text-3xl font-black">
+            Built for journalists, by a journalist.
+          </h2>
+
+          <p className="mt-5 text-base leading-8 text-neutral-300">
+            GSR Network uses automation to organize information, monitor live
+            signals, and surface useful context. It does not replace reporting,
+            verification, sourcing, or human editorial responsibility.
           </p>
         </div>
 

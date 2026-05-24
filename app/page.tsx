@@ -171,7 +171,10 @@ export default function Home() {
 
         {/* FOOTER */}
         <footer className="mt-10 border-t border-neutral-800 pt-6 text-sm font-semibold text-neutral-400">
-          Built for journalists, by a journalist.
+          <p>Built for journalists, by a journalist.</p>
+          <p className="mt-3 text-xs font-medium leading-6 text-neutral-500">
+            As an Amazon Associate, Global Sports Report LLC may earn from qualifying purchases.
+          </p>
         </footer>
       </section>
     </main>

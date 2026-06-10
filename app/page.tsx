@@ -1,4 +1,27 @@
 export default function Home() {
+  const socialLinks = [
+    {
+      label: "YouTube",
+      href: "https://www.youtube.com/@TheGSRNetwork",
+      icon: "/social-youtube.svg",
+    },
+    {
+      label: "Spotify",
+      href: "https://open.spotify.com/show/033twUpbE3ukspgx0T3XNq?si=CilT1aEXRJ2OEFTMdtvF2A",
+      icon: "/social-spotify.svg",
+    },
+    {
+      label: "TikTok",
+      href: "https://www.tiktok.com/@thegsrnetwork",
+      icon: "/social-tiktok.svg",
+    },
+    {
+      label: "Beehiiv",
+      href: "https://gsr-network-news.beehiiv.com/",
+      icon: "/social-beehiiv.svg",
+    },
+  ];
+
   const sites = [
     {
       name: "Global Sports Report",
@@ -79,6 +102,22 @@ export default function Home() {
           <p className="mt-5 inline-flex rounded-full border border-red-500/40 bg-red-500/10 px-5 py-2 text-sm font-bold uppercase tracking-[0.22em] text-red-300">
             Updated hourly across the network
           </p>
+
+          <div className="mt-5 flex flex-wrap items-center gap-3" aria-label="GSR social links">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Follow GSR on ${link.label}`}
+                title={link.label}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-white transition hover:border-red-400"
+              >
+                <img src={link.icon} alt="" className="h-6 w-6" />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* NETWORK GRAPHIC */}

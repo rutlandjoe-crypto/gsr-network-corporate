@@ -210,10 +210,34 @@ export default function Home() {
 
         {/* FOOTER */}
         <footer className="mt-10 border-t border-neutral-800 pt-6 text-sm font-semibold text-neutral-400">
+          <section className="mb-6 max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-300">
+              Founder&apos;s Bookshelf
+            </p>
+            <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              {[
+                ["Meditations", "Marcus Aurelius"],
+                ["The Ragamuffin Gospel", "Brennan Manning"],
+                ["The Elements of Journalism", "Bill Kovach & Tom Rosenstiel"],
+              ].map(([title, author]) => (
+                // TODO: Replace this Amazon search URL with the final Amazon Associates URL.
+                <a
+                  key={title}
+                  href={`https://www.amazon.com/s?k=${encodeURIComponent(`${title} ${author}`)}&tag=gsrnetwork-20`}
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  className="rounded-xl border border-neutral-800 bg-neutral-900/80 px-4 py-3"
+                >
+                  <span className="block text-sm font-bold text-neutral-200">{title}</span>
+                  <span className="mt-1 block text-xs font-medium text-neutral-500">{author}</span>
+                </a>
+              ))}
+            </div>
+            <p className="mt-3 text-xs font-medium leading-6 text-neutral-500">
+              As an Amazon Associate, GSR Network earns from qualifying purchases.
+            </p>
+          </section>
           <p>Built for journalists, by a journalist.</p>
-          <p className="mt-3 text-xs font-medium leading-6 text-neutral-500">
-            As an Amazon Associate, Global Sports Report LLC may earn from qualifying purchases.
-          </p>
         </footer>
       </section>
     </main>

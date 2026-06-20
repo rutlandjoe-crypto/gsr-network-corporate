@@ -49,12 +49,21 @@ export default function ConsultingPage() {
             organizations modernize digital publishing, newsletters, mobile
             strategy, audience growth, and editorial workflows in the AI era.
           </p>
-          <a
-            href="mailto:globalsportsio@yahoo.com?subject=GSR%20Network%20Consulting"
-            className="mt-9 inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
-          >
-            Start a GSR Network Consulting conversation
-          </a>
+          <div className="mt-9 flex flex-wrap gap-4">
+            <a
+              href="mailto:globalsportsio@yahoo.com?subject=GSR%20Network%20Consulting"
+              className="inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
+            >
+              Start a GSR Network Consulting conversation
+            </a>
+            <a
+              href="/gsr-network-consulting-overview.pdf"
+              download
+              className="inline-flex rounded-full border border-red-500/40 bg-red-500/10 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-red-300 transition hover:border-red-400 hover:bg-red-500/20"
+            >
+              Download GSR Network Consulting Overview
+            </a>
+          </div>
         </section>
 
         <section className="grid gap-6 py-8 md:grid-cols-2">

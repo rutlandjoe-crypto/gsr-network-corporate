@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   const socialLinks = [
     {
@@ -102,6 +104,15 @@ export default function Home() {
           <p className="mt-5 inline-flex rounded-full border border-red-500/40 bg-red-500/10 px-5 py-2 text-sm font-bold uppercase tracking-[0.22em] text-red-300">
             Updated hourly across the network
           </p>
+
+          <div className="mt-6">
+            <Link
+              href="/consulting"
+              className="inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
+            >
+              GSR Network Consulting
+            </Link>
+          </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-3" aria-label="GSR social links">
             {socialLinks.map((link) => (

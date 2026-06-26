@@ -146,7 +146,7 @@ export default function ConsultingPage() {
           <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
-                Proof of work
+                Featured editorial products
               </p>
               <h2 className="mt-4 text-3xl font-black sm:text-4xl">
                 Newsletter Prototype: Built From the GSR Network System
@@ -183,7 +183,7 @@ export default function ConsultingPage() {
           <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
-                Proof of work
+                Featured editorial products
               </p>
               <h2 className="mt-4 text-3xl font-black sm:text-4xl">
                 Sports Morning Report
@@ -214,7 +214,7 @@ export default function ConsultingPage() {
           <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
-                Proof of work
+                Featured editorial products
               </p>
               <h2 className="mt-4 text-3xl font-black sm:text-4xl">
                 World Cup Intelligence Report

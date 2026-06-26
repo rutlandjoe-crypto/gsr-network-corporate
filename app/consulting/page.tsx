@@ -142,6 +142,42 @@ export default function ConsultingPage() {
           </div>
         </section>
 
+        <section className="py-14">
+          <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
+                Proof of work
+              </p>
+              <h2 className="mt-4 text-3xl font-black sm:text-4xl">
+                Newsletter Prototype: Built From the GSR Network System
+              </h2>
+              <p className="mt-5 text-base leading-8 text-neutral-300">
+                This prototype shows how GSR Network can turn editorial
+                judgment, data signals, and structured news monitoring into a
+                polished newsletter product.
+              </p>
+              <a
+                href="/newsletter-prototype-v2.pdf"
+                className="mt-7 inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-red-400"
+              >
+                View Newsletter Prototype
+              </a>
+              <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-neutral-200">
+                Want something like this for your company, team, league,
+                podcast, or publication? Let&apos;s talk.
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-3xl border border-red-500/30 bg-red-500/10 p-3 shadow-2xl">
+              <iframe
+                src="/newsletter-prototype-v2.pdf#toolbar=0&navpanes=0"
+                title="Newsletter prototype preview"
+                className="h-[420px] w-full rounded-2xl border-0 bg-white"
+              />
+            </div>
+          </div>
+        </section>
+
         <section className="my-10 rounded-3xl border border-red-500/30 bg-red-500/10 p-8 shadow-2xl sm:p-10">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-300">
             Start a conversation

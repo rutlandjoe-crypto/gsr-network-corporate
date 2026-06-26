@@ -142,7 +142,7 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        <section className="py-14">
+        <section className="space-y-8 py-14">
           <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
@@ -152,9 +152,12 @@ export default function ConsultingPage() {
                 Newsletter Prototype: Built From the GSR Network System
               </h2>
               <p className="mt-5 text-base leading-8 text-neutral-300">
-                This prototype shows how GSR Network can turn editorial
-                judgment, data signals, and structured news monitoring into a
-                polished newsletter product.
+                This prototype demonstrates how GSR Network Consulting designs
+                and produces professional newsletters for media companies,
+                businesses, sports organizations, creators, and brands. By
+                combining editorial expertise with AI-assisted research and
+                structured news intelligence, GSR Network delivers polished,
+                publication-ready products tailored to each client&apos;s needs.
               </p>
               <a
                 href="/newsletter-prototype-v2.pdf"
@@ -172,6 +175,68 @@ export default function ConsultingPage() {
               <iframe
                 src="/newsletter-prototype-v2.pdf#toolbar=0&navpanes=0"
                 title="Newsletter prototype preview"
+                className="h-[420px] w-full rounded-2xl border-0 bg-white"
+              />
+            </div>
+          </div>
+
+          <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
+                Proof of work
+              </p>
+              <h2 className="mt-4 text-3xl font-black sm:text-4xl">
+                Sports Morning Report
+              </h2>
+              <p className="mt-5 text-base leading-8 text-neutral-300">
+                A concise portfolio sample showing how GSR Network Consulting
+                can produce a daily sports briefing for teams, leagues, sports
+                media companies, agencies, sponsors, and executives who need
+                the day&apos;s storylines organized with editorial judgment.
+              </p>
+              <a
+                href="/sports-morning-report-v1.pdf"
+                className="mt-7 inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-red-400"
+              >
+                View Sports Morning Report
+              </a>
+            </div>
+
+            <div className="overflow-hidden rounded-3xl border border-red-500/30 bg-red-500/10 p-3 shadow-2xl">
+              <iframe
+                src="/sports-morning-report-v1.pdf#toolbar=0&navpanes=0"
+                title="Sports Morning Report preview"
+                className="h-[420px] w-full rounded-2xl border-0 bg-white"
+              />
+            </div>
+          </div>
+
+          <div className="grid gap-8 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8 shadow-2xl lg:grid-cols-[1fr_1.1fr] lg:items-center sm:p-10">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-400">
+                Proof of work
+              </p>
+              <h2 className="mt-4 text-3xl font-black sm:text-4xl">
+                World Cup Intelligence Report
+              </h2>
+              <p className="mt-5 text-base leading-8 text-neutral-300">
+                A sample tournament intelligence product built to connect match
+                coverage with business, betting, AI, politics and security,
+                host cities, media, sponsorship, and fan engagement across
+                platforms.
+              </p>
+              <a
+                href="/world-cup-intelligence-report-v1.pdf"
+                className="mt-7 inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-red-400"
+              >
+                View World Cup Report
+              </a>
+            </div>
+
+            <div className="overflow-hidden rounded-3xl border border-red-500/30 bg-red-500/10 p-3 shadow-2xl">
+              <iframe
+                src="/world-cup-intelligence-report-v1.pdf#toolbar=0&navpanes=0"
+                title="World Cup Intelligence Report preview"
                 className="h-[420px] w-full rounded-2xl border-0 bg-white"
               />
             </div>

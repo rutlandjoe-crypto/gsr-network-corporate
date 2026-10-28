@@ -105,7 +105,8 @@ export default function Home() {
             Updated hourly across the network
           </p>
 
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/app?source=corporate" className="inline-flex rounded-full bg-amber-300 px-6 py-3 text-sm font-black uppercase tracking-[0.16em] text-neutral-950 transition hover:bg-amber-200">Download Android App</Link>
             <Link
               href="/consulting"
               className="inline-flex rounded-full bg-red-500 px-6 py-3 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
@@ -254,3 +255,4 @@ export default function Home() {
     </main>
   );
 }
+

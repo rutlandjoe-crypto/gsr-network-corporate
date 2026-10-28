@@ -24,7 +24,7 @@ export default async function AppDownloadPage({ searchParams }: {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-300">The GSR Network Android app</p>
             <h1 className="mt-5 text-5xl font-black leading-tight tracking-tight sm:text-6xl">Five desks.<br /><span className="text-amber-300">One app.</span></h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-300">Sports, AI, politics, entertainment, and betting—together on your Android phone. Browse the feeds and open the stories that matter to you.</p>
-            <a href={`/download/android?source=${source}`} className="mt-8 inline-flex min-h-12 items-center rounded-xl bg-amber-300 px-7 py-4 text-base font-black text-neutral-950 transition hover:bg-amber-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Download for Android ↓</a>
+            <a href={`/download/android?source=${source}`} style={{ color: "#0a0a0a" }} className="mt-8 inline-flex min-h-12 items-center rounded-xl bg-amber-300 px-7 py-4 text-base font-black text-neutral-950 transition hover:bg-amber-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Download for Android ↓</a>
             <p className="mt-4 text-sm text-neutral-400">Free · Version {androidRelease.version} · {(androidRelease.bytes / 1000000).toFixed(1)} MB · Android only</p>
             <p className="mt-3 max-w-lg text-sm leading-6 text-neutral-400">No Google Play account required. This APK does not install on iPhone or iPad.</p>
           </section>

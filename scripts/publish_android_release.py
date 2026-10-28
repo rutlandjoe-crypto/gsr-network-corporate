@@ -16,20 +16,25 @@ def gh(*args, check=True):
     return subprocess.run(["gh", *args], check=check, capture_output=True, text=True)
 
 
+def find_release(repo, tag):
+    # The tag endpoint excludes drafts. The authenticated release list includes
+    # them, which lets a failed upload resume without replacing any assets.
+    releases = json.loads(gh("api", f"repos/{repo}/releases?per_page=100").stdout)
+    return next((release for release in releases if release["tag_name"] == tag), None)
+
+
 def main():
     config = json.loads((ROOT / "app-release.json").read_text())
     repo, tag = config["repository"], config["tag"]
-    current = gh("api", f"repos/{repo}/releases/tags/{tag}", check=False)
-    if current.returncode and "404" not in current.stderr:
-        raise RuntimeError("Could not check the existing release: " + current.stderr)
-    if current.returncode:
+    release = find_release(repo, tag)
+    if release is None:
         gh("release", "create", tag, "--repo", repo, "--draft", "--target", os.environ["GITHUB_SHA"],
            "--title", f"GSR Network Android {config['version']}", "--notes",
            "Official signed Android APK. All referral copies are byte-identical. "
            f"SHA-256: {config['sha256']}. Download counts include repeats and tests; they are not installation counts.")
-        release = json.loads(gh("api", f"repos/{repo}/releases/tags/{tag}").stdout)
-    else:
-        release = json.loads(current.stdout)
+        release = find_release(repo, tag)
+        if release is None:
+            raise RuntimeError("The newly created draft release could not be found.")
 
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
@@ -59,7 +64,7 @@ def main():
         with ThreadPoolExecutor(max_workers=3) as pool:
             list(pool.map(upload, config["sources"]))
 
-    published = json.loads(gh("api", f"repos/{repo}/releases/tags/{tag}").stdout)
+    published = json.loads(gh("api", f"repos/{repo}/releases/{release['id']}").stdout)
     assets = {asset["name"]: asset for asset in published.get("assets", [])}
     for source in config["sources"]:
         asset = assets[f"gsr-network-{config['version']}-{source}.apk"]

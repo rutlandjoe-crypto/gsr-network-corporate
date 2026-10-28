@@ -1,0 +1,28 @@
+name: Publish verified Android app
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - app-release.json
+      - scripts/publish_android_release.py
+      - .github/workflows/publish-android-app.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-app-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Publish checksum-verified APK and referral copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/publish_android_release.py

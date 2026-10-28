@@ -1,0 +1,21 @@
+{
+  "version": "1.0.1",
+  "tag": "android-v1.0.1",
+  "repository": "rutlandjoe-crypto/gsr-network-corporate",
+  "sourceUrl": "https://expo.dev/artifacts/eas/xdP3F8a3_31PRcIsTxrkRm7v6uPf6UHev5WG0aUMT1I.apk",
+  "sha256": "251cce56e2aaf4ed0dc2b941e480f66c33a1f58b48ce8df24fd26680fa445638",
+  "bytes": 67240243,
+  "sources": {
+    "direct": "Direct / other",
+    "corporate": "GSR Network",
+    "sports": "Global Sports Report",
+    "ai": "Global AI Report",
+    "politics": "Global Politics Report",
+    "entertainment": "Global Entertainment Report",
+    "betting": "Global Betting Report",
+    "lone-star": "Lone Star Report",
+    "x": "X",
+    "linkedin": "LinkedIn",
+    "lounge-ai": "Lounge.AI"
+  }
+}

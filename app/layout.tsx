@@ -1,4 +1,5 @@
 import GsrNewsletterSignup from "./GsrNewsletterSignup";
+import GsrAppLinks from "./GsrAppLinks";
 import "./globals.css";
 
 export const metadata = {
@@ -14,7 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}
+      <body><GsrAppLinks source="corporate" />{children}
+        <GsrAppLinks source="corporate" placement="footer" />
         <GsrNewsletterSignup /></body>
     </html>
   );

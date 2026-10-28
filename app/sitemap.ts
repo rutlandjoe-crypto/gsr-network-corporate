@@ -5,6 +5,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
+      url: `${baseUrl}/app`,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "hourly",
@@ -18,3 +23,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
+
